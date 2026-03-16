@@ -14,23 +14,30 @@ def sales_log():
     total=(price*amount)
     print(f"Subtotal:{total}")
     s_log={
-        "producto": name,
-        "Precio": price,
-        "cantidad":amount,
+        "name": name,
+        "price": price,
+        "amount":amount,
         "total":total
     }
     all_data.append(s_log)
 
+def summary():
+    print("\nResumen de ventas.\n")
+    for i in all_data:
+        print(f"producto: {i['name']}\n\nvalor unitario: {i['price']}\ncantidad: {i['amount']}\n\ntotal: {i['total']}.\n\n") 
+
 def total_s():
     f_total= sum(i["total"] for i in all_data) 
-    print(f"El total de las ventas es: {f_total}")
+    print(f"El total recaudado en las ventas es: {f_total}")
     
-
 
 while end != "si":
     sales_log()
     end=input("Desea finalizar de digitar?: ")
+summary()
 total_s()
+print("Gracias por usar el sistema de registro!")
+
 
 #try:
 #except:
