@@ -1,10 +1,13 @@
+import tkinter as tkinter
+from tkinter import simpledialog
+
 print("Bienvenido al registro de ventas!\n")
 
 all_data = []
 end = "no"
 
 def sales_log():
-    name=input("Ingrese nombre del producto: ")
+    name=simpledialog.askstring("Ingrese nombre del producto: ")
     price=float(input("Ingrese el precio del producto: "))
     while price <= 0:
         price=float(input("El valor debe ser superior a 0.\nIngrese cantidad nuevamente "))
