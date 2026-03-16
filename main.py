@@ -40,4 +40,3 @@ try:
     print("Gracias por usar el sistema de registro!")
 except:
     print("Error: se ingreso un valor invalido intenten nuevamente.")
-
