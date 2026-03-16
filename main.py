@@ -31,15 +31,13 @@ def total_s():
     print(f"El total recaudado en las ventas es: {f_total}")
     
 
-while end != "si":
-    sales_log()
-    end=input("Desea finalizar de digitar?: ")
-summary()
-total_s()
-print("Gracias por usar el sistema de registro!")
-
-
-#try:
-#except:
-#print("Error: se ingreso un valor invalido intenten nuevamente.")
+try:
+    while end != "si":
+        sales_log()
+        end=input("Desea finalizar de digitar?: ")
+    summary()
+    total_s()
+    print("Gracias por usar el sistema de registro!")
+except:
+    print("Error: se ingreso un valor invalido intenten nuevamente.")
 
