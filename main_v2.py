@@ -33,7 +33,7 @@ reporte=""
 def summary():
     global reporte
     for i in all_data:
-        reporte += (f"--------------------\n\nproducto: {i['name']}\n\nvalor unitario: {i['price']}\ncantidad: {i['amount']}\n\ntotal: {i['total']}.\n\n--------------------\n")
+        reporte += (f"--------------------\n\nProducto: {i['name']}\n\nValor unitario: {i['price']}\nCantidad: {i['amount']}\n\nCotal: {i['total']}.\n\n--------------------\n")
 
 
 def total_s():
@@ -43,11 +43,11 @@ def total_s():
 try:
     while end != "si":
         sales_log()
-        end=input("Desea finalizar de digitar?: ")
+        end=simpledialog.askstring("Confirmacion","Desea finalizar de digitar?: ")
     summary()
     total_s()
     f_total=total_s()
-    messagebox.showinfo("Resumen de ventas", reporte + f"El total recaudado en las ventas es: {f_total}")
+    messagebox.showinfo("Resumen de ventas", reporte + f"\nEl total recaudado en las ventas es: {f_total}")
     print("Gracias por usar el sistema de registro!")
 except:
     print("Error: se ingreso un valor invalido intenten nuevamente.")
