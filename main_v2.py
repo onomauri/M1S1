@@ -31,20 +31,22 @@ def sales_log():
 reporte=""
 
 def summary():
+    global reporte
     for i in all_data:
-        global reporte
-        reporte += (f"--------------------\n\nproducto: {i['name']}\n\nvalor unitario: {i['price']}\ncantidad: {i['amount']}\n\ntotal: {i['total']}.\n\n--------------------")
+        reporte += (f"--------------------\n\nproducto: {i['name']}\n\nvalor unitario: {i['price']}\ncantidad: {i['amount']}\n\ntotal: {i['total']}.\n\n--------------------\n")
 
 
 def total_s():
     f_total= sum(i["total"] for i in all_data)
-    #print(f"El total recaudado en las ventas es: {f_total}") 
+    #print(f"El total recaudado en las ventas es: {f_total}")
+    return f_total
 try:
     while end != "si":
         sales_log()
         end=input("Desea finalizar de digitar?: ")
     summary()
     total_s()
+    f_total=total_s()
     messagebox.showinfo("Resumen de ventas", reporte + f"El total recaudado en las ventas es: {f_total}")
     print("Gracias por usar el sistema de registro!")
 except:

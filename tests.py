@@ -31,3 +31,5 @@ reporte=""
 for i in all_data:
         reporte += (f"producto: {i['name']}\n\nvalor unitario: {i['price']}\ncantidad: {i['amount']}\n\ntotal: {i['total']}.\n\n")
 print(reporte)
+
+#print("-"*5) # ejemplo pra practicar despues 
