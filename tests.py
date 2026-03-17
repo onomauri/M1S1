@@ -1,4 +1,4 @@
-import tkinter as tkinter
+import tkinter as tk
 from tkinter import simpledialog
 from tkinter import messagebox
 
@@ -8,6 +8,9 @@ from tkinter import messagebox
 #total=(price*amount)
 #print(name)
 #messagebox.showinfo("Cantidad", f"El total es: {total}")
+
+root = tk.Tk()
+root.geometry("300x350")
 
 all_data = []
 
@@ -33,3 +36,13 @@ all_data = []
 #print(reporte)
 
 #print("-"*5) # ejemplo pra practicar despues 
+
+name=tk.Entry(root)
+name.pack(anchor="center", pady="10")
+
+button_n = tk.Button(root,text="add")
+button_n.pack()
+
+
+
+root.mainloop()
